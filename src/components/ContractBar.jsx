@@ -1,12 +1,9 @@
+import Icon from './Icon';
 import styled from '@emotion/styled';
 import Badge from './badges/Badge';
 
 export default function ContractBar({contract}) {
   const {name, type, status} = contract;
-  const iconSrcMap = {
-    'building': '/images/icons/icon-building-mono.png',
-    'house': 'images/icons/icon-home-mono.png',
-  };
 
   const badgeProp = {
     'new': {
@@ -37,9 +34,7 @@ export default function ContractBar({contract}) {
 
   return (
     <S.Container>
-      <S.IconContainer>
-        <S.Icon src={iconSrcMap[type]} />
-      </S.IconContainer>
+      <Icon type={type} />
       <S.TextContainer>
         {name}
       </S.TextContainer>
@@ -74,9 +69,6 @@ const S = {
     align-items: center;
     height: auto;
     label: ContractBar__IconContainer;  
-  `,
-  Icon: styled.img`
-    label: ContractBar__Icon;
   `,
   TextContainer: styled.div`
     display: flex;
