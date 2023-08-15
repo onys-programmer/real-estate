@@ -2,14 +2,22 @@ import styled from '@emotion/styled';
 import PropertyCard from './PropertyCard';
 import myProperties from '../../../__fixtures__/myProperties';
 import { HeaderText } from '../../../constants/styles/commonCSS';
+import DropDown from '../../../components/DropDown';
 
 export default function MyProperties() {
+  const propertyStatusOptions = [
+    '전체매물',
+    '임대중매물',
+    '공실매물',
+  ];
+
   return (
     <S.Container>
       <S.Header>
         <HeaderText>
           나의 매물
         </HeaderText>
+        <DropDown options={propertyStatusOptions}/>
       </S.Header>
       <S.Flex>
         {
@@ -33,6 +41,7 @@ const S = {
     padding: 12px 0;
     display: flex;
     justify-content: start;
+    align-items: center;
     gap: 20px;
     label: MyProperty__Header;
   `,

@@ -5,6 +5,10 @@ export const border = {
   'border-radius': '10px',
 };
 
+export const lightBorder = {
+  'border': 'solid 1px #e9e9e9',
+};
+
 export const HeaderText = styled.h2`
   font-size: 20px;
 `
