@@ -19,7 +19,7 @@ const S = {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    background-color: #ded2d2;
+
     label: RentalStatus__Container;
   `,
   StatusList: styled.div`

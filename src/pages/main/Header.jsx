@@ -19,9 +19,7 @@ const S = {
     height: 45px;
     display: flex;
     align-items: center;
-    padding: 10px 0;
-    background-color: #ebeed4;
-    border-bottom: 1px solid #ebebeb;
+    padding: 70px 0 10px;
     label: Header__Container;
   `,
   UserName: styled.span`

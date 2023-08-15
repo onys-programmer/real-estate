@@ -25,7 +25,7 @@ export default function MyProperties() {
 const S = {
   Container: styled.div`
     width: 100%;
-    background-color: #e0eedb;
+    padding-bottom: 31px;
     label: MyProperty__Container;
   `,
   Header: styled.div`
@@ -34,11 +34,14 @@ const S = {
     display: flex;
     justify-content: start;
     gap: 20px;
+    label: MyProperty__Header;
   `,
   Flex: styled.div`
     display: flex;
     justify-content: start;
+    height: fit-content;
+    overflow: hidden;
     gap: 13px;
-    overflow-x: scroll;
+    label: MyProperty__Flex;
   `,
 };

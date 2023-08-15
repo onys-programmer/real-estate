@@ -24,7 +24,6 @@ const S = {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    background-color: #d8daeb;
     label: Main__Container;
   `,
   Flex: styled.div`
