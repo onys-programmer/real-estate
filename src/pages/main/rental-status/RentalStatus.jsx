@@ -19,7 +19,13 @@ export default function RentalStatus() {
       <S.StatusList>
         {
           rentalStatusItems.map((item, index) => (
-            <RentalStatusCard item={item} />
+            <S.StatusListItem>
+              <S.Line />
+              <S.Circle />
+              <S.CardContainer>
+                <RentalStatusCard item={item} />
+              </S.CardContainer>
+            </S.StatusListItem>
           ))
         }
       </S.StatusList>
@@ -48,13 +54,47 @@ const S = {
   StatusList: styled.div`
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding: 13px;
+    padding: 0 13px 4px 19.5px;
     width: 625px;
     height: 371px;
     overflow-y: auto;
     background-color: #FAFAFA;
     ${border}
     label: RentalStatus__StatusList;
+  `,
+  StatusListItem: styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16.5px;
+    :first-child {
+      margin-top: 4px;
+    }
+    :last-child {
+      margin-bottom: 4px;
+    }
+    label: RentalStatus__StatusListItem;
+  `,
+  Line: styled.div`
+    width: 2px;
+    height: 100%;
+    background-color: #E9E9E9;
+    label: RentalStatus__Line;
+  `,
+  Circle: styled.div`
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #E9E9E9;
+    left: -6.5px;
+    border-radius: 999px;
+    background-color: #CBECFF;
+    label: RentalStatus__Circle;
+  `,
+  CardContainer: styled.div`
+    padding: 4px 0;
+    width: 573px;
+    label: RentalStatus__CardContainer;
   `,
 };
