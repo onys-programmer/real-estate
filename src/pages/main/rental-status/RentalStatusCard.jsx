@@ -8,6 +8,7 @@ import { border } from "../../../constants/styles/commonCSS";
 export default function RentalStatusCard({item}) {
   const { type, name, rentalStartDate, rentalExpirationDate, progressPoint } = item;
 
+  // 임대 시작일과 종료일로부터 임대 기간의 일 수를 계산하는 함수
   const getPeriod = (rentalStartDate, rentalExpirationDate) => {
     const startDate = new Date(rentalStartDate);
     const expirationDate = new Date(rentalExpirationDate);
@@ -17,17 +18,20 @@ export default function RentalStatusCard({item}) {
     return periodDay;
   };
 
+  // 임대 기간의 일 수를 계산하여 badge에 표시할 텍스트 생성
   const periodDay = getPeriod(rentalStartDate, rentalExpirationDate);
-
   const badgeText = `임대일 ${periodDay}일 남음`;
 
   return (
     <S.Container>
       <S.Row1>
+        {/* 임대현황 아이콘 */}
         <Icon type={type}/>
+        {/* 매물 이름 */}
         <S.TextContainer>
           {name}
         </S.TextContainer>
+        {/* 임대 기간 badge */}
         <S.BadgeContainer>
           <Badge
             text={badgeText}
@@ -37,15 +41,19 @@ export default function RentalStatusCard({item}) {
           />
         </S.BadgeContainer>
       </S.Row1>
+      {/* 상태 진행 바 */}
       <ProgressBar point={progressPoint} />
       <S.Row2>
+        {/* 임대 만료일 표시 */}
         <RentalDate text={"임대만료"} date={rentalExpirationDate} />
+        {/* 임대 시작일 표시 */}
         <RentalDate text={"임대시작"} date={rentalStartDate} />
       </S.Row2>
     </S.Container>
   );
 };
 
+// 스타일링
 const S = {
   Container: styled.div`
     width: 100%;

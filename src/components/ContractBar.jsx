@@ -1,10 +1,13 @@
+// Icon 컴포넌트와 필요한 모듈을 가져옴
 import Icon from './Icon';
 import styled from '@emotion/styled';
 import Badge from './badges/Badge';
 
+// ContractBar 컴포넌트 정의
 export default function ContractBar({contract}) {
   const {name, type, status} = contract;
 
+  // 각 상태에 따른 배지 속성을 정의한 객체
   const badgeProp = {
     'new': {
       text: '새 요청',
@@ -32,6 +35,7 @@ export default function ContractBar({contract}) {
     },
   };
 
+  // UI 반환
   return (
     <S.Container>
       <Icon type={type} />
@@ -50,6 +54,7 @@ export default function ContractBar({contract}) {
   );
 };
 
+// 스타일 객체 생성
 const S = {
   Container: styled.div`
     width: 100%;
@@ -62,18 +67,18 @@ const S = {
     &:hover {
       background-color: #F2F2F2;
     }
-    label: ContractBar__Container;
+    label: ContractBar__Container; /* 스타일 레이블 설정 */
   `,
   IconContainer: styled.div`
     display: flex;
     align-items: center;
     height: auto;
-    label: ContractBar__IconContainer;  
+    label: ContractBar__IconContainer; /* 스타일 레이블 설정 */
   `,
   TextContainer: styled.div`
     display: flex;
     align-items: center;
-    label: ContractBar__TextContainer;
+    label: ContractBar__TextContainer; /* 스타일 레이블 설정 */
   `,
   BadgeContainer: styled.div`
     margin-left: auto;

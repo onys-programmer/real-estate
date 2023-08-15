@@ -4,17 +4,22 @@ import ModeSelector from './ModeSelector';
 export default function Header() {
   return (
     <S.Container>
+      {/* 헤더 타이틀 */}
       <S.HeaderTitle>
+        {/* 사용자 이름 */}
         <S.UserName>
           김공실
         </S.UserName>
+        {/* 헤더 타이틀 메시지 */}
         님의 부동자산 현황입니다.
       </S.HeaderTitle>
+      {/* 모드 선택 컴포넌트 */}
       <ModeSelector />
     </S.Container>
   );
 };
 
+// 스타일링
 const S = {
   Container: styled.div`
     width: 100%;
