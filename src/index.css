@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Pretendard', sans-serif;
+  color: #3F3F3F;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 code {
