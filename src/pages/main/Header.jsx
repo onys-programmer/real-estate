@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import ModeSelector from './ModeSelector';
 
 export default function Header() {
   return (
@@ -9,6 +10,7 @@ export default function Header() {
         </S.UserName>
         님의 부동자산 현황입니다.
       </S.HeaderTitle>
+      <ModeSelector />
     </S.Container>
   );
 };
@@ -18,6 +20,7 @@ const S = {
     width: 100%;
     height: 45px;
     display: flex;
+    gap: 23px;
     align-items: center;
     padding: 70px 0 10px;
     label: Header__Container;
