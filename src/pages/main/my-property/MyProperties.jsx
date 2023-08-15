@@ -17,7 +17,11 @@ export default function MyProperties() {
         <HeaderText>
           나의 매물
         </HeaderText>
-        <DropDown options={propertyStatusOptions}/>
+        <DropDown options={propertyStatusOptions} />
+        <S.Button>
+          <img src="/images/icons/icon-plus-mono.svg" alt="plus" />
+          매물 업데이트
+        </S.Button>
       </S.Header>
       <S.Flex>
         {
@@ -44,6 +48,26 @@ const S = {
     align-items: center;
     gap: 20px;
     label: MyProperty__Header;
+  `,
+  Button: styled.button`
+    display: flex;
+    width: 141px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 13px;
+    margin-left: auto;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    background-color: #11B7E4;
+    cursor: pointer;
+    &:hover {
+      background-color: #0A9EC7;
+    }
+    label: MyProperty__Button;
   `,
   Flex: styled.div`
     display: flex;
